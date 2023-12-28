@@ -10,6 +10,7 @@ public class DragPanel extends JPanel {
 
     ImageIcon image = new ImageIcon("src/main/java/smile-icon.png");
     ImageIcon imageConfused = new ImageIcon("src/main/java/confused-color-icon.png");
+Image backgroundImage;
 
     Point imageCorner;
     Point previousPoint;
@@ -21,12 +22,14 @@ public class DragPanel extends JPanel {
         DragListener dragListener = new DragListener();
         this.addMouseListener(clickListener);
         this.addMouseMotionListener(dragListener);
-        this.setBackground(Color.LIGHT_GRAY);
+        //this.setBackground(Color.LIGHT_GRAY);
+        backgroundImage = new ImageIcon("src/main/java/sky.jpg").getImage();
     }
 
     public void paintComponent(Graphics graphics) {
 
         super.paintComponent(graphics);
+        graphics.drawImage(backgroundImage, 0,0,null);
         image.paintIcon(this, graphics, (int) imageCorner.getX(), (int) imageCorner.getY());
     }
 

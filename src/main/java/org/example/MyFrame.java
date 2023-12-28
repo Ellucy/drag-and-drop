@@ -10,7 +10,7 @@ public class MyFrame extends JFrame {
 
         this.add(dragPanel);
         this.setTitle("Drag and drop");
-        this.setSize(2600, 2600);
+        this.setSize(1135, 1280);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }
